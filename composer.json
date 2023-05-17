@@ -1,0 +1,28 @@
+{
+  "name": "teste/2utec",
+  "description": "simple registration project that consumes an api to show adress by zip-code",
+  "authors": [
+    {
+      "name": "Gabriel Pereira",
+      "email": "gabriel.psouza1997@outlook.com",
+      "homepage": "https://github.com/gabpesouza",
+      "role": "Developer"
+    }
+  ],
+  "config": {
+    "vendor-dir": "vendor"
+  },
+  "autoload": {
+    "psr-4": {
+      "Source\\": "source/"
+    },
+    "files": [
+      "source/Support/Config.php",
+      "source/Support/Helpers.php"
+    ]
+  },
+  "require": {
+    "php": "8.*",
+    "league/plates": "v4.0.0-alpha"
+  }
+}
