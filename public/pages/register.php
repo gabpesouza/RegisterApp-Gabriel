@@ -1,6 +1,6 @@
 
     <div class="col-lg-6 col-xl-6 card-wrapper">
-        <form method="POST" action="success.php">
+        <form method="POST" action="?page=success">
             <div class="card-register">
                 <div class="card-center">
                     <div class="card-header"><span>Registro</span></div>

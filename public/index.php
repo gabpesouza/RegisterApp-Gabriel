@@ -22,12 +22,17 @@ $connection = Connection::getInstance();
             <div class="container d-flex justify-content-center align-items-center">
                 <div class="row justify-content-center col-12">
 
+
+
                     <?php try{
                         require loadView();
+                        if(!empty($_GET['msg']) && !empty($_GET['class'])){
+                            echo "<div class='d-flex justify-content-center text-{$_GET['class']} mt-3'>" . $_GET['msg'] . "</div>";
+                        }
                     }catch (Exception $e){
                         echo $e->getMessage();
                     }
-                ?>
+                    ?>
 
                 </div>
             </div>
