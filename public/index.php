@@ -34,5 +34,6 @@ $connection = Connection::getInstance();
 
         <script src="assets/js/jquery.js"></script>
         <script src="assets/js/bootstrap.min.js"></script>
+        <script src="assets/js/apiCaller.js"></script>
     </body>
 </html>

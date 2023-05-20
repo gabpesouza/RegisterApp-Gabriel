@@ -18,7 +18,7 @@
                     <div class="d-flex flex-wrap align-items-center mt-2 justify-content-between w-100">
                         <div class="form-group col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5">
                             <label class="form-label" for="cep">Cep:</label>
-                            <input class="form-control" id="cep" name="cep" type="text">
+                            <input onchange="loadAdressFromApi(this.value);" class="form-control" id="cep" name="cep" type="text">
                         </div>
                         <div class="col-1"></div>
                         <div class="form-group col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5">
@@ -39,13 +39,13 @@
                     </div>
                     <div class="d-flex flex-wrap align-items-center mt-2 justify-content-between w-100">
                         <div class="form-group col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5">
-                            <label class="form-label" for="estado">Logradouro:</label>
-                            <input class="form-control" id="estado" name="estado" type="text">
+                            <label class="form-label" for="logradouro">Logradouro:</label>
+                            <input class="form-control" id="logradouro" name="logradouro" type="text">
                         </div>
                         <div class="col-1"></div>
                         <div class="form-group col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5">
-                            <label class="form-label" for="cidade">Bairro:</label>
-                            <input class="form-control" id="cidade" name="cidade" type="text">
+                            <label class="form-label" for="bairro">Bairro:</label>
+                            <input class="form-control" id="bairro" name="bairro" type="text">
                         </div>
                     </div>
                     <div class="d-flex  mt-4 justify-content-center w-100">

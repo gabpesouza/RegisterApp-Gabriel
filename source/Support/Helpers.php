@@ -14,3 +14,15 @@ function loadView(){
 
 
 }
+
+function callApi(string $apiUrl) : object{
+
+    $client = curl_init($apiUrl);
+    curl_setopt($client,CURLOPT_RETURNTRANSFER,true);
+    $response = curl_exec($client);
+    $data = json_decode($response);
+    curl_close($client);
+
+    return $data;
+
+}
