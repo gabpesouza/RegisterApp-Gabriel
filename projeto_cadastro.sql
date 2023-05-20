@@ -1,11 +1,9 @@
-
-/**DUMP DO SQL**/
 -- phpMyAdmin SQL Dump
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 18, 2023 at 02:28 AM
+-- Generation Time: May 20, 2023 at 10:26 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -31,6 +29,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `tb_enderecos` (
   `id_endereco` int(11) NOT NULL,
+  `cep` varchar(10) NOT NULL,
   `estado` varchar(2) NOT NULL,
   `cidade` varchar(50) NOT NULL,
   `bairro` varchar(50) NOT NULL,
@@ -47,8 +46,7 @@ CREATE TABLE `tb_enderecos` (
 CREATE TABLE `tb_usuarios` (
   `id_usuario` int(11) NOT NULL,
   `nome` varchar(255) NOT NULL,
-  `email` varchar(100) NOT NULL,
-  `senha` varchar(255) NOT NULL
+  `email` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -77,7 +75,8 @@ ALTER TABLE `tb_enderecos`
 -- Indexes for table `tb_usuarios`
 --
 ALTER TABLE `tb_usuarios`
-  ADD PRIMARY KEY (`id_usuario`);
+  ADD PRIMARY KEY (`id_usuario`),
+  ADD UNIQUE KEY `email` (`email`);
 
 --
 -- Indexes for table `tb_usuarios_enderecos`
@@ -95,19 +94,19 @@ ALTER TABLE `tb_usuarios_enderecos`
 -- AUTO_INCREMENT for table `tb_enderecos`
 --
 ALTER TABLE `tb_enderecos`
-  MODIFY `id_endereco` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_endereco` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `tb_usuarios`
 --
 ALTER TABLE `tb_usuarios`
-  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `tb_usuarios_enderecos`
 --
 ALTER TABLE `tb_usuarios_enderecos`
-  MODIFY `id_registro` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_registro` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- Constraints for dumped tables
