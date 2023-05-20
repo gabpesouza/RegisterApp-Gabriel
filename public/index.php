@@ -1,6 +1,8 @@
 <?php
 require_once "../vendor/autoload.php";
+use Source\Core\Connection;
 
+$connection = Connection::getInstance();
 
 ?>
 

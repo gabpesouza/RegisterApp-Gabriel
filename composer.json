@@ -23,6 +23,7 @@
   },
   "require": {
     "php": "8.*",
-    "league/plates": "v4.0.0-alpha"
+    "league/plates": "v4.0.0-alpha",
+    "ext-pdo": "*"
   }
 }
