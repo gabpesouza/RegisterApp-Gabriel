@@ -33,9 +33,11 @@ try {
     VALUES ({$adressId},{$userId})");
 
     $connection->commit();
-}catch(Exception $exception){
-    $msg = "Erro ao cadastrar! {$exception->getMessage()}";
-    header("Location: ?page=register&msg={$msg}&class=danger");
-}
+
     $msg = "Cadastro realizado com sucesso!";
     header("Location: ?page=register&msg={$msg}&class=success");
+
+}catch(Exception $exception){
+    $msg = "Já existe um cadastro com esse email!";
+    header("Location: ?page=register&msg={$msg}&class=danger");
+}
